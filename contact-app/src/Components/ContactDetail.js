@@ -1,6 +1,7 @@
 import React from "react";
 import user from "../Images/user.jpg";
 import { Link } from "react-router-dom";
+import { withRouter } from "react-router";
 
 const ContactDetail = (props) => {
    console.log(props)

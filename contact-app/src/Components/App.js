@@ -10,6 +10,7 @@ import ContactDetail from "./ContactDetail";
 function App() {
   const LOCAL_STORAGE_KEY = "contacts";
   const [contacts, setContacts] = useState([]);
+  const [details,setDetails] = useState({});
 
   const addContactHandler = (contact) => {
     console.log(contact);
@@ -46,10 +47,11 @@ function App() {
               <ContactList
                 contacts={contacts}
                 getContactId={removeContactHandler}
+                setDetails={setDetails}
               />
             }
           />
-          <Route path="/contact/:id" element={<ContactDetail />} />
+          <Route path="/contact/:id" element={<ContactDetail details={details}/>} />
         </Routes>
       </BrowserRouter>
     </div>

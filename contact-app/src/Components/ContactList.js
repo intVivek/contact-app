@@ -15,6 +15,7 @@ const ContactList = (props) => {
             contact={contact}
             clickHandler={deleteContactHandler}
             key={contact.id}
+            setDetails={props.setDetails}
           />
         
       </div>
