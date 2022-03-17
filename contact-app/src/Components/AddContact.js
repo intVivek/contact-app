@@ -1,20 +1,25 @@
 import React from "react";
 
+
 class AddContact extends React.Component {
   state = {
     name: "",
     email: "",
   };
+ 
   add = (e) => {
     e.preventDefault();
-    if(this.state.name==="" || this.state.email===""){
-      alert("All the fields are manadatory!")
-      return
+    if (this.state.name === "" || this.state.email === "") {
+      alert("All the fields are manadatory!");
+      return;
     }
     this.props.addContactHandler(this.state);
-    this.setState({name:"", email:""})
+    this.setState({ name: "", email: "" });
+    // this.props.history.push('/')
+    
   };
   render() {
+   
     return (
       <div className="ui main ">
         <h2>Add Contact</h2>
